@@ -1,1 +1,3 @@
 /venv/
+/migrations/
+/app/sql_app.db

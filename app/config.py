@@ -9,33 +9,33 @@ load_dotenv(path.join(basedir, '.env'))
 """ CONFIGS """
 class Config:
     """Base config."""
-    """SECRET_KEY = environ.get('SECRET_KEY') or '01!ChAnGeThIs!89'
-    SESSION_COOKIE_NAME = environ.get('SESSION_COOKIE_NAME') or '!Opt2021!'
+    SECRET_KEY = environ.get('SECRET_KEY') or '01!ChAnGeThIs!89'
+    SESSION_COOKIE_NAME = environ.get('SESSION_COOKIE_NAME') or 'devcookie'
     STATIC_FOLDER = 'static'
     TEMPLATES_FOLDER = 'templates'
 
-    MAIL_SERVER = environ.get('MAIL_SERVER') or 'mail.tesztelgeto.tk'
+    #MAIL_SERVER = environ.get('MAIL_SERVER') or 'mail.tesztelgeto.tk'
     #MAIL_USERNAME = environ.get('MAIL_USERNAME') or None
-    MAIL_USERNAME = None
+    #MAIL_USERNAME = None
     #MAIL_PASSWORD = environ.get('MAIL_PASSWORD') or None
-    MAIL_PASSWORD = None
-    MAIL_DEFAULT_SENDER = environ.get('MAIL_DEFAULT_SENDER') or None
-    MAIL_PORT = environ.get('MAIL_PORT') or 25
-    MAIL_USE_TLS = environ.get('MAIL_USE_TLS') or True
+    #MAIL_PASSWORD = None
+    #MAIL_DEFAULT_SENDER = environ.get('MAIL_DEFAULT_SENDER') or None
+    #MAIL_PORT = environ.get('MAIL_PORT') or 25
+    #MAIL_USE_TLS = environ.get('MAIL_USE_TLS') or True
 
     TEMPLATES_AUTO_RELOAD = True
 
-    UPLOAD_FOLDER = path.join(basedir, 'app/uploads/')
+    #UPLOAD_FOLDER = path.join(basedir, 'app/uploads/')
 
-    BACKUP_FOLDER = path.join(basedir, 'app/backup/')
+    #BACKUP_FOLDER = path.join(basedir, 'app/backup/')
 
-    LOG_FOLDER = path.join(basedir, 'app/log/')
+    #LOG_FOLDER = path.join(basedir, 'app/log/')
 
     #CLIENT_LISTS = path.join('app/temp/')
-    ALLOWED_EXTENSIONS = {'zip'}
+    #ALLOWED_EXTENSIONS = {'zip'}
     #SENDGRID_API_KEY = environ.get('SENDGRID_API_KEY') or 'APIKEY'
     #LANG = environ.get('LANG') or 'C.UTF-8'
-    #LC_ALL = environ.get('LC_ALL') or 'C.UTF-8'"""
+    #LC_ALL = environ.get('LC_ALL') or 'C.UTF-8'
 
 class PostgreSQL(Config):
     """Production config."""
@@ -48,10 +48,10 @@ class PostgreSQL(Config):
 
 class SQLite(Config):
     """Development config."""
-    """FLASK_ENV = 'development'
+    FLASK_ENV = 'development'
     DEBUG = True
     TESTING = True
     DATABASE_URI = environ.get('DEV_DATABASE_URI')
     SQLALCHEMY_DATABASE_URI = environ.get('SQLITE_URI') or \
                               'sqlite:///' + path.join(basedir, 'data.db')
-    SQLALCHEMY_TRACK_MODIFICATIONS = False"""
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
